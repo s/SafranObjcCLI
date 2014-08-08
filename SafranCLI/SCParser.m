@@ -9,8 +9,9 @@
 #import "SCParser.h"
 #define MAXFEED 15
 
-#define kOutputTextColorGreen   "\x1b[32m"
+#define kOutputTextColorRed     "\x1b[31m"
 #define kOutputTextColorBlue    "\x1b[34m"
+#define kOutputTextColorGreen   "\x1b[32m"
 #define kOutputTextColorReset   "\x1b[0m"
 
 @interface SCParser ()
@@ -95,7 +96,7 @@
     }
     else
     {
-        NSLog(@"Error while parsing feed. Sorry.");
+        printf(kOutputTextColorRed "An error occured while parsing feed.");
     }
 }
 
